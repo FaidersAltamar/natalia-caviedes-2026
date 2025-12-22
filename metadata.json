@@ -1,0 +1,8 @@
+{
+  "name": "Natalia Cavides - Cámara por el Huila",
+  "description": "Sitio web oficial de campaña para Natalia Cavides, ex-alcaldesa de Palermo y candidata a la Cámara de Representantes por el Huila, Partido Alianza Verde #103.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
