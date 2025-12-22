@@ -1,12 +1,19 @@
 
 import React from 'react';
-import { 
+import {
   Users, Award, MessageSquare, Map, Briefcase, Leaf, Shield, TrendingUp, Heart, Star, Sparkles, Zap, ShieldCheck
 } from 'lucide-react';
 
 export const CAMPAIGN_NAME = "Natalia Caviedes Chinchilla";
 export const BALLOT_NUMBER = "103";
 export const SLOGAN = "¡Es Ahora, y Es Contigo!";
+
+export const IMAGES = {
+  PARTY_LOGO: "https://i.imgur.com/GET3Llz.png",
+  CANDIDATE_PHOTO: "https://i.imgur.com/8OZ22Hm.png",
+  BALLOT_IMAGE: "https://i.imgur.com/UMqlEou.png",
+  NAME_LOGO: "https://i.imgur.com/ZTiriwm.png"
+};
 
 export const PROFILE_INFO = {
   roles: ["Hija", "Madre", "Esposa", "Líder de resultados"],
