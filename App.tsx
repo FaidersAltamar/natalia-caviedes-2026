@@ -25,19 +25,20 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-[100] transition-all duration-500 ${scrolled ? 'py-2' : 'py-6'}`}>
-      <div className={`max-w-[90rem] mx-auto flex justify-between items-center px-6 lg:px-12 py-3 rounded-full transition-all ${scrolled ? 'glass-color mx-4 shadow-2xl shadow-green-900/15' : 'bg-white shadow-xl shadow-slate-200/50 mx-4'}`}>
+    <nav className={`fixed w-full z-[100] transition-all duration-500 ${scrolled ? 'py-2' : 'py-4'}`}>
+      <div className={`max-w-[90rem] mx-auto flex justify-between items-center px-6 lg:px-12 py-2 rounded-full transition-all ${scrolled ? 'glass-color mx-4 shadow-2xl shadow-green-900/15' : 'bg-white shadow-xl shadow-slate-200/50 mx-4'}`}>
         
-        {/* Lado Izquierdo: Identidad de Marca Maximizada */}
-        <div className="flex items-center gap-4 sm:gap-8">
-          <img src={PARTY_LOGO} className="h-12 sm:h-20 w-auto object-contain" alt="Alianza Verde" />
+        {/* Lado Izquierdo: Identidad de Marca Optimizada */}
+        <div className="flex items-center gap-4 sm:gap-6">
+          <img src={PARTY_LOGO} className="h-10 sm:h-12 w-auto object-contain" alt="Alianza Verde" />
           
-          <div className="h-10 sm:h-16 w-[2px] bg-green-100 hidden sm:block"></div>
+          <div className="h-8 sm:h-10 w-[1.5px] bg-green-100 hidden sm:block"></div>
           
           <div className="flex items-center">
+            {/* Logo con escala visual (1.4x) para que se vea grande sin empujar la altura del menú (layout h-12/16) */}
             <img 
               src={NAME_LOGO} 
-              className="h-16 sm:h-24 lg:h-28 w-auto object-contain transform transition-transform hover:scale-105 origin-left" 
+              className="h-12 sm:h-16 w-auto object-contain transform scale-[1.4] origin-left ml-3 sm:ml-5 transition-transform hover:scale-[1.45]" 
               alt="Natalia Caviedes" 
             />
           </div>
@@ -57,14 +58,14 @@ const Navbar = () => {
           ))}
           <a 
             href="#votar" 
-            className="bg-green-600 hover:bg-slate-900 text-white px-10 py-4 rounded-full font-black text-xs uppercase tracking-widest shadow-lg shadow-green-600/30 transition-all hover:-translate-y-1 active:scale-95"
+            className="bg-green-600 hover:bg-slate-900 text-white px-8 py-3 rounded-full font-black text-xs uppercase tracking-widest shadow-lg shadow-green-600/30 transition-all hover:-translate-y-1 active:scale-95"
           >
             VOTA 103
           </a>
         </div>
         
-        <button onClick={() => setIsOpen(true)} className="xl:hidden text-green-700 p-3 bg-green-50 rounded-full hover:bg-green-100 transition-colors">
-          <Menu size={32}/>
+        <button onClick={() => setIsOpen(true)} className="xl:hidden text-green-700 p-2 bg-green-50 rounded-full hover:bg-green-100 transition-colors">
+          <Menu size={28}/>
         </button>
       </div>
       
@@ -73,9 +74,9 @@ const Navbar = () => {
         <div className="fixed inset-0 bg-white z-[120] flex flex-col p-8 sm:p-12 animate-in fade-in slide-in-from-top-10 duration-500">
           <div className="flex justify-between items-center mb-16">
             <div className="flex items-center gap-4">
-              <img src={PARTY_LOGO} className="h-12" alt="PV" />
-              <div className="h-10 w-px bg-slate-200"></div>
-              <img src={NAME_LOGO} className="h-14" alt="Natalia" />
+              <img src={PARTY_LOGO} className="h-10" alt="PV" />
+              <div className="h-8 w-px bg-slate-200"></div>
+              <img src={NAME_LOGO} className="h-12" alt="Natalia" />
             </div>
             <button onClick={() => setIsOpen(false)} className="text-slate-900 bg-slate-100 p-4 rounded-full hover:bg-slate-200 transition-colors">
               <X size={32}/>
@@ -160,6 +161,53 @@ const Hero = () => {
   );
 };
 
+const ImpactSection = () => {
+  return (
+    <section className="bg-slate-950 py-32 relative overflow-hidden">
+      {/* Background Giant Text */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40vw] font-display font-black text-slate-900 select-none leading-none opacity-50">
+        103
+      </div>
+      
+      {/* Decorative gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-transparent to-slate-950 z-10 pointer-events-none"></div>
+
+      {/* Marquee */}
+      <div className="relative z-10 mb-32 -rotate-2 scale-110 opacity-80">
+         <div className="flex animate-marquee items-center whitespace-nowrap">
+            {[1,2,3,4].map(i => (
+              <React.Fragment key={i}>
+                <span className="text-7xl md:text-9xl font-display font-black text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.15)] mx-8 italic hover:text-white/10 transition-colors duration-500 cursor-default">
+                  HUILA CON CARÁCTER
+                </span>
+                <span className="text-7xl md:text-9xl font-display font-black text-green-600 mx-8 italic drop-shadow-[0_0_30px_rgba(22,163,74,0.3)]">
+                  #103
+                </span>
+              </React.Fragment>
+            ))}
+         </div>
+      </div>
+
+      {/* Stats Cards */}
+      <div className="max-w-7xl mx-auto px-8 relative z-20">
+         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {HUILA_STATS.map((stat, i) => (
+              <div key={i} className="group relative bg-slate-900/60 backdrop-blur-md border border-white/5 p-10 rounded-[2.5rem] hover:bg-green-600 hover:border-green-500 transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_20px_60px_-15px_rgba(22,163,74,0.3)] overflow-hidden">
+                 <div className="absolute -right-4 -bottom-4 text-white/5 group-hover:text-white/20 transform rotate-12 transition-colors">
+                    <TrendingUp size={100} />
+                 </div>
+                 
+                 <p className="text-6xl font-display font-black text-white group-hover:scale-110 transition-transform origin-left mb-4 relative z-10">{stat.value}</p>
+                 <div className="w-12 h-1 bg-green-500 group-hover:bg-white my-6 transition-all duration-500 group-hover:w-full relative z-10"></div>
+                 <p className="text-xs font-bold uppercase tracking-[0.3em] text-slate-400 group-hover:text-white transition-colors relative z-10">{stat.label}</p>
+              </div>
+            ))}
+         </div>
+      </div>
+    </section>
+  );
+};
+
 const ProfileSection = () => {
   return (
     <section id="perfil" className="py-40 bg-white relative overflow-hidden">
@@ -214,24 +262,6 @@ const ProfileSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
-};
-
-const StatsBlock = () => {
-  return (
-    <section className="py-20 bg-slate-950 text-white relative overflow-hidden">
-       <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] select-none">
-          <span className="text-[30rem] font-display font-black">HUILA</span>
-       </div>
-       <div className="max-w-7xl mx-auto px-8 grid grid-cols-2 lg:grid-cols-4 gap-16 relative z-10 text-center">
-          {HUILA_STATS.map((stat, i) => (
-            <div key={i}>
-              <p className="text-7xl md:text-8xl font-display font-black text-green-400 italic mb-2 tracking-tighter">{stat.value}</p>
-              <p className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-400">{stat.label}</p>
-            </div>
-          ))}
-       </div>
     </section>
   );
 };
@@ -410,18 +440,7 @@ const App: React.FC = () => {
     <div className="antialiased bg-white text-slate-900">
       <Navbar />
       <Hero />
-      
-      <div className="bg-slate-950 py-12 overflow-hidden whitespace-nowrap relative z-20">
-         <div className="flex animate-marquee items-center">
-            {[1,2,3,4].map(i => (
-              <span key={i} className="text-white text-5xl font-display font-black uppercase tracking-tighter mx-24 flex items-center italic">
-                NATALIA CAVIEDES <span className="mx-12 text-green-500 text-8xl">103</span> HUILA CON CARÁCTER <span className="mx-12 text-green-900">•</span>
-              </span>
-            ))}
-         </div>
-      </div>
-
-      <StatsBlock />
+      <ImpactSection />
       <ProfileSection />
       <TrajectorySection />
       <ProposalsSection />
