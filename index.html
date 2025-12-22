@@ -1,12 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natalia Caviedes | Cámara Huila 103</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Space+Grotesk:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --brand-green: #16a34a;
@@ -23,7 +25,9 @@
             overflow-x: hidden;
         }
 
-        .font-display { font-family: 'Bricolage Grotesque', sans-serif; }
+        .font-display {
+            font-family: 'Bricolage Grotesque', sans-serif;
+        }
 
         .glass-color {
             background: rgba(255, 255, 255, 0.9);
@@ -35,6 +39,7 @@
         .text-gradient-green {
             background: linear-gradient(135deg, #064e3b 0%, #16a34a 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -51,32 +56,58 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px) scale(1); }
-            50% { transform: translateY(-20px) scale(1.05); }
+
+            0%,
+            100% {
+                transform: translateY(0px) scale(1);
+            }
+
+            50% {
+                transform: translateY(-20px) scale(1.05);
+            }
         }
 
-        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
 
         .animate-marquee {
             animation: marquee 40s linear infinite;
         }
 
         @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
 
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: #ffffff; }
-        ::-webkit-scrollbar-thumb { background: #16a34a; border-radius: 20px; border: 3px solid #ffffff; }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #ffffff;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #16a34a;
+            border-radius: 20px;
+            border: 3px solid #ffffff;
+        }
 
         .section-curve {
             clip-path: ellipse(150% 100% at 50% 100%);
         }
 
-        * { transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); }
+        * {
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
     </style>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@^19.2.3",
@@ -88,7 +119,10 @@
 }
 </script>
 </head>
+
 <body class="selection:bg-green-600 selection:text-white overflow-x-hidden">
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
