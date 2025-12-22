@@ -123,12 +123,14 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-8 pt-6">
-            <a href="#votar" className="bg-slate-950 hover:bg-green-600 text-white px-12 py-6 rounded-full font-black text-2xl flex items-center shadow-2xl transition-all hover:scale-105 active:scale-95 group">
-              VOTA 103 <ArrowUpRight className="ml-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" size={28} />
+          <div className="flex flex-wrap items-center gap-6 pt-6">
+            <a href="#votar" className="bg-[#0b0c15] text-white px-10 py-5 rounded-full font-display font-bold text-3xl flex items-center gap-4 shadow-2xl shadow-slate-900/20 hover:bg-green-600 hover:scale-105 transition-all duration-300 group">
+              VOTA 103 
+              <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform text-white" size={32} />
             </a>
-            <div className="bg-green-50 px-6 py-4 rounded-full flex items-center space-x-6 border-2 border-green-100 shadow-inner group overflow-hidden">
-               <img src={BALLOT_IMAGE} alt="Cámara 103" className="h-14 object-contain group-hover:scale-110 transition-transform" />
+            
+            <div className="bg-[#f0fdf4] px-8 py-3 rounded-[3rem] border border-green-100 shadow-xl shadow-green-100/50 flex items-center justify-center h-[88px] min-w-[160px] transform hover:rotate-2 transition-transform duration-300 cursor-default">
+               <img src={BALLOT_IMAGE} alt="Logo 103" className="h-full w-auto object-contain scale-110" />
             </div>
           </div>
         </div>
@@ -419,20 +421,29 @@ const VotingSection = () => {
 
 const ContactCTA = () => {
   return (
-    <section className="py-48 bg-green-600 relative overflow-hidden">
-       <div className="absolute inset-0 bg-slate-950 opacity-10"></div>
-       <div className="max-w-5xl mx-auto px-8 relative z-10 text-center text-white">
-          <h2 className="text-7xl md:text-9xl font-display font-black mb-16 tracking-tighter italic uppercase leading-none">
-            TU VOZ ES <span className="text-slate-900">EL MOTOR.</span>
+    <section className="py-32 bg-green-600 relative overflow-hidden">
+       {/* Gradient subtle overlay */}
+       <div className="absolute inset-0 bg-gradient-to-b from-green-500/50 to-green-700/50 pointer-events-none"></div>
+
+       <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
+          <h2 className="text-6xl md:text-8xl lg:text-9xl font-display font-black italic tracking-tighter uppercase leading-none mb-10">
+            <span className="text-white">Tu voz es </span>
+            <span className="text-slate-900">El</span>
+            <br />
+            <span className="text-slate-900">Motor.</span>
           </h2>
-          <p className="text-green-50 text-3xl font-light mb-20 italic max-w-3xl mx-auto leading-relaxed">
-            Hablemos hoy. Natalia está lista para escucharte y llevar tus propuestas al Congreso Nacional.
+          
+          <p className="text-white/90 text-lg md:text-2xl font-light italic max-w-2xl mx-auto leading-relaxed mb-14">
+            Hablemos hoy. Natalia está lista para escucharte y <br className="hidden md:block" />
+            llevar tus propuestas al Congreso Nacional.
           </p>
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-            <a href="https://wa.me/573000000000" target="_blank" className="bg-white text-green-700 px-16 py-8 rounded-full font-black text-2xl flex items-center gap-6 hover:scale-105 transition-all shadow-2xl">
-              <MessageCircle size={36} /> CHATEA CON NOSOTROS
+          
+          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <a href="https://wa.me/573000000000" target="_blank" className="bg-white text-green-800 px-8 py-4 rounded-full font-bold text-sm md:text-base flex items-center gap-3 hover:scale-105 transition-all shadow-lg hover:shadow-green-900/20 group w-full sm:w-auto justify-center">
+              <MessageCircle className="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-12 transition-transform" /> 
+              CHATEA CON NOSOTROS
             </a>
-            <a href="mailto:info@nataliacaviedes.com" className="text-white border-2 border-white/30 px-16 py-8 rounded-full font-black text-2xl hover:bg-white/10 transition-all">
+            <a href="mailto:info@nataliacaviedes.com" className="text-white border border-white/30 px-8 py-4 rounded-full font-bold text-sm md:text-base hover:bg-white/10 transition-all w-full sm:w-auto justify-center flex">
               ENVIAR PROPUESTA
             </a>
           </div>
@@ -443,29 +454,52 @@ const ContactCTA = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-24 relative border-t border-slate-100">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="grid md:grid-cols-12 gap-20 items-center mb-20">
-          <div className="md:col-span-5 flex items-center space-x-10">
-            <img src={PARTY_LOGO} className="h-16" alt="PV" />
-            <div className="border-l-4 border-green-600 pl-10">
-              <img src={NAME_LOGO} className="h-12 w-auto object-contain" alt="Natalia Caviedes" />
-            </div>
+    <footer className="bg-white py-20 border-t border-slate-50 w-full relative z-50">
+      <div className="max-w-[90rem] mx-auto px-8">
+        
+        {/* Main Footer Content */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-12 mb-20 w-full">
+          
+          {/* Left: Branding */}
+          <div className="flex items-center gap-6">
+            <img src={PARTY_LOGO} className="h-10 sm:h-12 w-auto object-contain" alt="Alianza Verde" />
+            <div className="h-10 w-[2px] bg-slate-300 rounded-full"></div>
+            <img src={NAME_LOGO} className="h-10 sm:h-12 w-auto object-contain" alt="Natalia Caviedes" />
           </div>
-          <div className="md:col-span-4 flex justify-center space-x-10 text-slate-400">
-              <Facebook size={32} className="hover:text-green-600 cursor-pointer transition-all" />
-              <Twitter size={32} className="hover:text-green-600 cursor-pointer transition-all" />
-              <Instagram size={32} className="hover:text-green-600 cursor-pointer transition-all" />
+
+          {/* Center: Social Icons */}
+          <div className="flex items-center gap-10">
+             {[
+               { Icon: Facebook, href: "#" },
+               { Icon: Twitter, href: "#" },
+               { Icon: Instagram, href: "#" }
+             ].map((social, i) => (
+               <a key={i} href={social.href} className="text-slate-400 hover:text-green-600 hover:-translate-y-1 transition-all duration-300">
+                 <social.Icon size={28} strokeWidth={2} />
+               </a>
+             ))}
           </div>
-          <div className="md:col-span-3 text-right">
-             <div className="bg-white border-4 border-slate-900 p-4 rounded-[2.5rem] inline-block shadow-2xl transform rotate-3">
-               <img src={BALLOT_IMAGE} alt="103" className="h-20" />
+
+          {/* Right: Cámara Badge (Recreated with code for sharpness) */}
+          <div>
+             <div className="bg-white border-[3px] border-slate-900 rounded-[2.5rem] px-6 py-2 flex items-center gap-3 shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-xl transition-all cursor-default group transform hover:scale-105">
+                <img src={PARTY_LOGO} className="h-10 w-auto object-contain group-hover:rotate-12 transition-transform duration-500" alt="Sunflower" />
+                <div className="flex flex-col leading-none">
+                    <span className="text-[11px] font-black text-green-800 uppercase tracking-tighter -mb-1">Cámara</span>
+                    <span className="text-4xl font-black text-green-700 tracking-tighter">103</span>
+                </div>
              </div>
           </div>
+          
         </div>
-        <p className="text-center text-slate-400 text-[10px] font-black tracking-[0.5em] uppercase italic pt-10 border-t border-slate-50">
-          &copy; 2026 NATALIA CAVIEDES CHINCHILLA • HUILA PRIMERO • CÁMARA POR EL HUILA
-        </p>
+
+        {/* Copyright */}
+        <div className="text-center pt-8 border-t border-slate-50">
+          <p className="text-[10px] font-black tracking-[0.6em] text-slate-300 uppercase">
+            © 2026 NATALIA CAVIEDES CHINCHILLA • HUILA PRIMERO • CÁMARA POR EL HUILA
+          </p>
+        </div>
+
       </div>
     </footer>
   );
