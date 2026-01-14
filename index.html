@@ -21,8 +21,18 @@
         :root {
             --brand-green: #16a34a;
             --brand-green-dark: #064e3b;
+            --brand-green-light: #22c55e;
+            --brand-green-accent: #10b981;
             --brand-mint: #bef264;
             --brand-light: #ffffff;
+            --brand-slate: #0f172a;
+            --brand-slate-light: #64748b;
+            --gradient-primary: linear-gradient(135deg, #16a34a 0%, #10b981 50%, #059669 100%);
+            --gradient-hero: linear-gradient(135deg, rgba(22, 163, 74, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+            --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-green: 0 20px 25px -5px rgba(22, 163, 74, 0.3), 0 10px 10px -5px rgba(22, 163, 74, 0.2);
         }
 
         body {
@@ -74,10 +84,40 @@
         }
 
         .glass-color {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(22, 163, 74, 0.2);
-            box-shadow: 0 20px 40px -10px rgba(22, 163, 74, 0.1);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(22, 163, 74, 0.15);
+        }
+
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-modern {
+            background: white;
+            border-radius: 2rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .card-modern:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-large);
+            border-color: rgba(22, 163, 74, 0.3);
         }
 
         .text-gradient-green {
