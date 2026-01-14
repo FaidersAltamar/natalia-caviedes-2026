@@ -7,9 +7,17 @@
     <title>Natalia Caviedes | Cámara Huila 103</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Space+Grotesk:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'VAG Rounded';
+            src: url('/src/fonts/VAG Rounded Std Black.otf') format('opentype');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
         :root {
             --brand-green: #16a34a;
             --brand-green-dark: #064e3b;
@@ -18,7 +26,7 @@
         }
 
         body {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             background-color: var(--brand-light);
             color: #0f172a;
             margin: 0;
@@ -26,7 +34,43 @@
         }
 
         .font-display {
-            font-family: 'Bricolage Grotesque', sans-serif;
+            font-family: 'VAG Rounded', sans-serif;
+            font-weight: 900;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Ajustes adicionales para títulos grandes tipo póster */
+        h1.font-display,
+        h2.font-display,
+        h3.font-display {
+            font-weight: 900;
+            letter-spacing: 0.03em;
+            line-height: 0.9;
+        }
+
+        /* Para texto muy grande (como en Hero) - estilo póster político */
+        .text-poster {
+            font-family: 'VAG Rounded', sans-serif;
+            font-weight: 900;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        /* Ajuste para números grandes (como "103") - más espaciado como en el póster */
+        .font-display.text-\[40vw\],
+        .font-display.text-8xl,
+        .font-display.text-\[12rem\] {
+            letter-spacing: 0.05em;
+        }
+
+        /* Override para que VAG Rounded siempre use su peso black */
+        .font-display.font-bold,
+        .font-display.font-black,
+        .font-display.font-semibold {
+            font-weight: 900 !important;
         }
 
         .glass-color {

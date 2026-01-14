@@ -10,7 +10,7 @@ const Proposals = () => {
                 <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
                     <div>
                         <span className="bg-green-600 text-white px-6 py-2 rounded-full font-black uppercase tracking-[0.3em] text-[10px] mb-6 inline-block">Plan de Trabajo 2026</span>
-                        <h2 className="text-5xl md:text-7xl font-display font-black text-slate-900 tracking-tighter leading-none uppercase">
+                        <h2 className="text-5xl md:text-7xl font-display text-slate-900 tracking-tighter leading-none uppercase">
                             Nuestras <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-800">Banderas.</span>
                         </h2>
@@ -39,7 +39,7 @@ const Proposals = () => {
                  `}>
                                     {b.icon}
                                 </div>
-                                <h3 className="text-3xl md:text-4xl font-display font-black leading-tight mb-4 uppercase italic">
+                                <h3 className="text-3xl md:text-4xl font-display leading-tight mb-4 uppercase italic">
                                     {b.title}
                                 </h3>
                             </div>
@@ -65,7 +65,7 @@ const Proposals = () => {
                     <div className="bg-green-600 rounded-[3rem] p-10 flex flex-col items-center justify-center text-center text-white relative overflow-hidden group">
                         <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-green-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <div className="relative z-10 space-y-6">
-                            <h3 className="text-3xl font-display font-black uppercase italic">¿Tienes una idea?</h3>
+                            <h3 className="text-3xl font-display uppercase italic">¿Tienes una idea?</h3>
                             <p className="text-green-100">Tu voz construye este proyecto. Cuéntanos qué necesita tu comunidad.</p>
                             <a href="#contacto" className="inline-block bg-white text-green-800 px-8 py-3 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-xl">
                                 Escríbenos

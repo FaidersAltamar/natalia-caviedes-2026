@@ -6,7 +6,7 @@ const Impact = () => {
     return (
         <section className="bg-white py-32 relative overflow-hidden border-t border-slate-50">
             {/* Background Giant Text */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40vw] font-display font-black text-slate-50 select-none leading-none opacity-60">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40vw] font-display text-slate-50 select-none leading-none opacity-60">
                 103
             </div>
 
@@ -15,10 +15,10 @@ const Impact = () => {
                 <div className="flex animate-marquee items-center whitespace-nowrap">
                     {[1, 2, 3, 4].map(i => (
                         <React.Fragment key={i}>
-                            <span className="text-7xl md:text-9xl font-display font-black text-transparent [-webkit-text-stroke:2px_#e2e8f0] mx-8 italic hover:text-slate-100 transition-colors duration-500 cursor-default">
+                            <span className="text-7xl md:text-9xl font-display text-transparent [-webkit-text-stroke:2px_#e2e8f0] mx-8 italic hover:text-slate-100 transition-colors duration-500 cursor-default">
                                 HUILA CON CARÁCTER
                             </span>
-                            <span className="text-7xl md:text-9xl font-display font-black text-green-500 mx-8 italic drop-shadow-sm">
+                            <span className="text-7xl md:text-9xl font-display text-green-500 mx-8 italic drop-shadow-sm">
                                 #103
                             </span>
                         </React.Fragment>
@@ -35,7 +35,7 @@ const Impact = () => {
                                 <TrendingUp size={100} />
                             </div>
 
-                            <p className="text-6xl font-display font-black text-slate-900 group-hover:scale-110 transition-transform origin-left mb-4 relative z-10 tracking-tight">{stat.value}</p>
+                            <p className="text-6xl font-display text-slate-900 group-hover:scale-110 transition-transform origin-left mb-4 relative z-10 tracking-tight">{stat.value}</p>
                             <div className="w-12 h-1 bg-green-500 group-hover:w-full transition-all duration-500 relative z-10"></div>
                             <p className="text-xs font-bold uppercase tracking-[0.25em] text-slate-400 group-hover:text-slate-600 transition-colors relative z-10 mt-6">{stat.label}</p>
                         </div>

@@ -43,7 +43,7 @@ const Profile = () => {
                     {/* Column 2: Biography & Tags (Span 4 on XL) */}
                     <div className="lg:col-span-7 xl:col-span-4 flex flex-col justify-center space-y-8 py-4 lg:px-4">
                         <div>
-                            <h3 className="text-3xl md:text-5xl font-display font-black text-green-600 italic mb-6 leading-none">HUILENSE <br /><span className="text-slate-900">DE CORAZÓN.</span></h3>
+                            <h3 className="text-3xl md:text-5xl font-display text-green-600 italic mb-6 leading-none">HUILENSE <br /><span className="text-slate-900">DE CORAZÓN.</span></h3>
                             <div className="space-y-6 text-lg text-slate-600 leading-relaxed font-light">
                                 <p>
                                     "Soy una mujer de carácter que ha forjado su camino con preparación y valentía. Como Natalia Caviedes Chinchilla, entiendo que la política es la herramienta para transformar realidades."
@@ -83,7 +83,7 @@ const Profile = () => {
                                     <CheckCircle2 size={24} />
                                 </div>
                                 <div>
-                                    <p className="font-display font-black text-lg uppercase italic">Garantía Verde</p>
+                                    <p className="font-display text-lg uppercase italic">Garantía Verde</p>
                                     <p className="text-xs text-green-100 uppercase tracking-widest">Compromiso Total</p>
                                 </div>
                             </div>

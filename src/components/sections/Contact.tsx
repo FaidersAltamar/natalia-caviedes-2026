@@ -8,7 +8,7 @@ const Contact = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-green-500/50 to-green-700/50 pointer-events-none"></div>
 
             <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
-                <h2 className="text-6xl md:text-8xl lg:text-9xl font-display font-black italic tracking-tighter uppercase leading-none mb-10">
+                <h2 className="text-6xl md:text-8xl lg:text-9xl font-display italic tracking-tighter uppercase leading-none mb-10">
                     <span className="text-white">Tu voz es </span>
                     <span className="text-slate-900">El</span>
                     <br />

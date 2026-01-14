@@ -27,11 +27,11 @@ const Hero = () => {
                   </span>
                </div>
 
-               <h1 className="font-display font-medium text-slate-900 leading-[0.85] tracking-tighter mb-10">
+               <h1 className="font-display text-slate-900 leading-[0.9] tracking-normal mb-10">
                   <span className={`block text-[clamp(4rem,8vw,9rem)] transition-all duration-1000 delay-100 transform ${loaded ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
                      NATALIA
                   </span>
-                  <span className={`block text-[clamp(4rem,8vw,9rem)] font-black text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-800 transition-all duration-1000 delay-200 transform ${loaded ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
+                  <span className={`block text-[clamp(4rem,8vw,9rem)] text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-800 transition-all duration-1000 delay-200 transform ${loaded ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
                      CAVIEDES
                   </span>
                </h1>

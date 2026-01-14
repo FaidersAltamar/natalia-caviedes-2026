@@ -86,7 +86,7 @@ const Navbar = () => {
                                 key={link}
                                 href={`#${link.toLowerCase()}`}
                                 onClick={() => setIsOpen(false)}
-                                className="text-5xl font-display font-black text-slate-900 hover:text-green-600 transition-colors uppercase tracking-tight"
+                                className="text-5xl font-display text-slate-900 hover:text-green-600 transition-colors uppercase tracking-tight"
                             >
                                 {link}
                             </a>
@@ -94,7 +94,7 @@ const Navbar = () => {
                         <a
                             href="#votar"
                             onClick={() => setIsOpen(false)}
-                            className="text-6xl font-display font-black text-green-600 uppercase italic mt-4"
+                            className="text-6xl font-display text-green-600 uppercase italic mt-4"
                         >
                             VOTA 103
                         </a>
