@@ -5,3 +5,8 @@
     font-style: normal;
     font-display: swap;
 }
+
+/* Fallback mejorado */
+.font-display {
+    font-family: 'VAG Rounded', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}

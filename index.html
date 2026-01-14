@@ -12,10 +12,15 @@
     <style>
         @font-face {
             font-family: 'VAG Rounded';
-            src: url('/src/fonts/VAG Rounded Std Black.otf') format('opentype');
+            src: url('./src/fonts/VAG Rounded Std Black.otf') format('opentype');
             font-weight: 900;
             font-style: normal;
             font-display: swap;
+        }
+        
+        /* Fallback para cuando la fuente no carga */
+        .font-display {
+            font-family: 'VAG Rounded', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
 
         :root {
@@ -44,12 +49,13 @@
         }
 
         .font-display {
-            font-family: 'VAG Rounded', sans-serif;
+            font-family: 'VAG Rounded', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             font-weight: 900;
             letter-spacing: 0.02em;
             text-transform: uppercase;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
         }
 
         /* Ajustes adicionales para títulos grandes tipo póster */
