@@ -15,60 +15,78 @@ export const IMAGES = {
   NAME_LOGO: "https://i.imgur.com/ZTiriwm.png"
 };
 
+export const CONTACT_PHONE = "+57 318 2222232";
+export const WHATSAPP_LINK = `https://wa.me/${CONTACT_PHONE.replace(/\D/g, '')}?text=${encodeURIComponent("Hola Natalia, quiero conocer más sobre tus propuestas para la Cámara.")}`;
+export const FACEBOOK_LINK = "https://www.facebook.com/NataliaCaviedesChinchilla/";
+export const INSTAGRAM_LINK = "https://www.instagram.com/caviedeschinchilla/";
+
 export const PROFILE_INFO = {
-  roles: ["Hija", "Madre", "Esposa", "Líder de resultados"],
+  roles: ["Abogada", "Empresaria", "Líder Política", "Madre", "Esposa"],
   whoAmI: {
     title: "¿Quién es Natalia Caviedes Chinchilla?",
-    text: "Soy una mujer de carácter que ha forjado su camino con preparación y valentía. Como Natalia Caviedes Chinchilla, entiendo que la política es la herramienta para transformar realidades, no para beneficio personal. Mi historia es la de miles de huilenses que trabajan duro por sus sueños y merecen ser escuchados en el Congreso."
+    text: "Es una mujer de fe, resiliente y profundamente convencida de que el cambio sí es posible. Abrió su camino en lo público enfrentando la política tradicional, haciendo política con la gente, escuchando en el territorio y entendiendo que servir es un acto de valentía. Cada dificultad la formó, cada resistencia la fortaleció y cada experiencia le enseñó a cuidar lo público con amor, carácter y responsabilidad."
   },
   trajectory: {
-    title: "Experiencia Probada en el Territorio",
-    intro: "Mi compromiso con el Huila se demuestra con hechos concretos y una hoja de vida intachable:",
+    title: "Trayectoria: Servir con Hechos",
+    intro: "El compromiso de Natalia Caviedes con el Huila no nació hoy; se ha construido caminando junto a su gente.",
     points: [
       {
-        role: "Ex-Alcaldesa de Palermo",
-        desc: "Lideré una administración de puertas abiertas, enfocada en la eficiencia administrativa y el impacto social real en cada vereda del municipio. Palermo fue ejemplo de gestión pública transparente.",
+        role: "Alcaldesa Histórica de Palermo (2020-2023)",
+        desc: "Fue la primera mujer alcaldesa del municipio de Palermo con una votación histórica de 9.757 votos (63.95%). Lideró con hechos reales: vivienda digna, vías, infraestructura educativa, electrificación rural y apoyo al campo.",
         icon: <Award className="text-green-400" />
       },
       {
-        role: "Gestión con Resultados",
-        desc: "He demostrado que el presupuesto público rinde cuando se cuida con rigor y honestidad. Mi prioridad siempre ha sido y será la gente del Huila.",
+        role: "Concejal de Palermo (2016-2019)",
+        desc: "Elegida en 2015, inició su camino de servicio público entendiendo las necesidades de su comunidad desde la base.",
+        icon: <Users className="text-green-400" />
+      },
+      {
+        role: "Liderazgo con Responsabilidad",
+        desc: "Aprendió que administrar los recursos de todos es una tarea sagrada que exige rigor, honestidad y transparencia.",
         icon: <ShieldCheck className="text-green-400" />
       }
     ]
   },
   challenge: {
-    title: "Misión: Cámara de Representantes por el Huila",
-    text: "Llevaremos la voz del Huila al Congreso con la fuerza de quien conoce la región palmo a palmo. Natalia Caviedes Chinchilla es la garantía de una representación que no se arrodilla ante el centralismo y que siempre pone al Huila primero."
+    title: "Su Reto: Ser la Voz del Huila",
+    text: "Hoy asume el desafío más grande de su vida: levantar la voz del Huila en el Congreso. No busca un cargo; busca representar con verdad, cercanía y compromiso. Cree en una renovación política que nazca del territorio y defienda lo que somos."
   }
 };
 
 export const BANDERAS = [
   {
-    title: "Defensa del Territorio",
-    desc: "Nuestras necesidades no se entienden desde un escritorio en Bogotá. Seré la voz firme que exija lo que el Huila merece por derecho y por justicia.",
+    title: "Representación Real",
+    desc: "Su voz nace de conocer el Huila y de amar esta tierra. No va a figurar, va a defender a su gente.",
     icon: <Map className="w-12 h-12 text-green-400" />
   },
   {
-    title: "Mujer y Familia",
-    desc: "Impulsaré leyes que protejan y empoderen a la mujer huilense, motor de nuestra economía y pilar fundamental de nuestros hogares.",
+    title: "Resultados con Sentido Humano",
+    desc: "Su experiencia demuestra que cuando se gobierna con el corazón, los resultados llegan.",
     icon: <Heart className="w-12 h-12 text-green-400" />
   },
   {
-    title: "Agro Productivo",
-    desc: "Legislaré para que nuestros campesinos tengan vías, tecnología y precios justos. El campo no es solo pasado, es el futuro del Huila.",
-    icon: <TrendingUp className="w-12 h-12 text-green-400" />
+    title: "Congreso Cercano",
+    desc: "La política debe volver a escuchar; estará en el territorio, rindiendo cuentas y caminando junto a la gente.",
+    icon: <Users className="w-12 h-12 text-green-400" />
   },
   {
-    title: "Transparencia Total",
-    desc: "Cero tolerancia con la corrupción. El 103 verde representa una política limpia, de frente al ciudadano y con resultados a la vista de todos.",
-    icon: <Shield className="w-12 h-12 text-green-400" />
+    title: "Construir desde la Región",
+    desc: "Su oficina será el Huila, porque el desarrollo se construye desde las veredas y los municipios.",
+    icon: <Briefcase className="w-12 h-12 text-green-400" />
   }
+];
+
+export const LINES_OF_ACTION = [
+  { title: "Gestión con Propósito", desc: "Trabajar incansablemente para traer oportunidades, inversión y proyectos que transformen vidas.", icon: <Briefcase /> },
+  { title: "Renovación Política", desc: "Una política honesta, valiente y transparente que recupere la confianza de la gente.", icon: <Sparkles /> },
+  { title: "Seguridad", desc: "Defender el derecho de las familias a vivir y trabajar en paz.", icon: <Shield /> },
+  { title: "Vías para el Progreso", desc: "Conectar el campo con los mercados para que el esfuerzo del campesino valga más.", icon: <Map /> },
+  { title: "Productividad con Oportunidades", desc: "Fortalecer el agro y el emprendimiento para un Huila con futuro.", icon: <TrendingUp /> }
 ];
 
 export const HUILA_STATS = [
   { label: "Municipios", value: "37" },
-  { label: "Número en Tarjetón", value: "103" },
-  { label: "Años de Gestión", value: "+12" },
-  { label: "Compromiso Huila", value: "100%" }
+  { label: "Votos Históricos", value: "9.757" },
+  { label: "% Votación", value: "63.95%" },
+  { label: "Número en Tarjetón", value: "103" }
 ];
