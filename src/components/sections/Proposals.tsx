@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BANDERAS, LINES_OF_ACTION } from '../../constants';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, X } from 'lucide-react';
 
 const Proposals = () => {
+    const [selectedProposal, setSelectedProposal] = useState<null | typeof BANDERAS[0]>(null);
+
     return (
         <section id="propuestas" className="py-40 bg-gradient-to-b from-white via-green-50/20 to-white relative overflow-hidden">
             {/* Background decoration */}
@@ -34,7 +36,8 @@ const Proposals = () => {
                     {BANDERAS.slice(0, 1).map((b, i) => (
                         <div
                             key={i}
-                            className="group relative md:col-span-2 lg:col-span-2 rounded-[2.5rem] p-12 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-3xl min-h-[500px]"
+                            onClick={() => setSelectedProposal(b)}
+                            className="group cursor-pointer relative md:col-span-2 lg:col-span-2 rounded-[2.5rem] p-12 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-3xl min-h-[500px]"
                         >
                             {/* Background gradient decoration */}
                             <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
@@ -56,7 +59,7 @@ const Proposals = () => {
                                 </p>
 
                                 {/* CTA */}
-                                <div className="flex items-center gap-3 text-white/90 hover:text-white transition-colors font-bold text-xs uppercase tracking-widest pt-6 border-t border-white/20">
+                                <div className="flex items-center gap-3 text-white/90 group-hover:text-green-400 transition-colors font-bold text-xs uppercase tracking-widest pt-6 border-t border-white/20">
                                     <span>Ver Propuesta Completa</span>
                                     <ArrowUpRight size={20} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" strokeWidth={2.5} />
                                 </div>
@@ -68,7 +71,8 @@ const Proposals = () => {
                     {BANDERAS.slice(1).map((b, i) => (
                         <div
                             key={i}
-                            className="group relative rounded-[2.5rem] p-10 flex flex-col justify-between overflow-hidden bg-white border-2 border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-green-200 min-h-[400px]"
+                            onClick={() => setSelectedProposal(b)}
+                            className="group cursor-pointer relative rounded-[2.5rem] p-10 flex flex-col justify-between overflow-hidden bg-white border-2 border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-green-200 min-h-[400px]"
                         >
                             {/* Subtle background decoration */}
                             <div className="absolute top-0 right-0 w-64 h-64 bg-green-50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -90,7 +94,7 @@ const Proposals = () => {
                                 </p>
 
                                 {/* CTA */}
-                                <div className="flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors font-bold text-xs uppercase tracking-widest pt-4 border-t border-slate-100 group-hover:border-green-100">
+                                <div className="flex items-center gap-2 text-green-600 group-hover:text-green-700 transition-colors font-bold text-xs uppercase tracking-widest pt-4 border-t border-slate-100 group-hover:border-green-100">
                                     <span>Ver Propuesta Completa</span>
                                     <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" strokeWidth={2.5} />
                                 </div>
@@ -99,7 +103,7 @@ const Proposals = () => {
                     ))}
 
                     {/* CTA Card */}
-                    <div className="group relative rounded-[2.5rem] p-10 flex flex-col items-center justify-center text-center bg-gradient-to-br from-green-600 to-green-700 text-white shadow-2xl hover:shadow-green-600/50 transition-all duration-500 hover:-translate-y-2 min-h-[400px] overflow-hidden">
+                    <div className="group relative rounded-[2.5rem] p-10 flex flex-col items-center justify-center text-center bg-gradient-to-br from-green-600 to-green-700 text-white shadow-2xl hover:shadow-green-600/50 transition-all duration-500 hover:-translate-y-2 min-h-[400px] overflow-hidden lg:col-span-2">
                         {/* Animated background */}
                         <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-green-800 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -148,6 +152,70 @@ const Proposals = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Proposal Modal Overlay */}
+            {selectedProposal && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+                    <div
+                        className="absolute inset-0 bg-slate-900/40 backdrop-blur-xl transition-opacity animate-in fade-in"
+                        onClick={() => setSelectedProposal(null)}
+                    ></div>
+
+                    <div className="relative bg-white w-full max-w-4xl rounded-[3rem] shadow-[0_50px_100px_rgba(0,0,0,0.3)] overflow-hidden animate-in zoom-in-95 duration-300 outline-none border border-slate-100 flex flex-col md:flex-row max-h-[90vh]">
+                        {/* Left Side: Visual/Icon */}
+                        <div className="w-full md:w-1/3 bg-gradient-to-br from-green-600 to-green-800 p-12 flex flex-col items-center justify-center text-white text-center relative overflow-hidden">
+                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,white_0.1rem,transparent_0.1rem)] bg-[size:1.5rem_1.5rem] opacity-10"></div>
+                            <div className="relative z-10">
+                                <div className="w-24 h-24 bg-white/20 rounded-[2rem] flex items-center justify-center mb-8 backdrop-blur-md border border-white/30 shadow-2xl mx-auto">
+                                    <div className="text-white scale-[2.5]">{selectedProposal.icon}</div>
+                                </div>
+                                <h4 className="text-2xl font-display uppercase italic text-green-50 leading-tight">Natalia <br /> Caviedes</h4>
+                                <div className="mt-8 bg-white/10 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest border border-white/20">Cámara 103</div>
+                            </div>
+                        </div>
+
+                        {/* Right Side: Content */}
+                        <div className="w-full md:w-2/3 p-10 md:p-16 flex flex-col overflow-y-auto custom-scrollbar">
+                            <button
+                                onClick={() => setSelectedProposal(null)}
+                                className="absolute top-8 right-8 p-3 rounded-full hover:bg-slate-50 transition-colors group z-20"
+                            >
+                                <X size={24} className="text-slate-400 group-hover:text-slate-900" />
+                            </button>
+
+                            <div className="relative z-10">
+                                <span className="text-green-600 font-black uppercase tracking-[0.3em] text-[10px] mb-4 block">Propuesta Estratégica</span>
+                                <h3 className="text-4xl md:text-5xl font-display text-slate-900 leading-none uppercase italic mb-8">
+                                    {selectedProposal.title}
+                                </h3>
+
+                                <div className="h-1 w-20 bg-green-500 rounded-full mb-10 shadow-lg shadow-green-500/20"></div>
+
+                                <div className="space-y-6 text-slate-600 text-lg md:text-xl leading-relaxed font-light italic border-l-4 border-green-100 pl-8 mb-10">
+                                    {selectedProposal.desc}
+                                </div>
+
+                                <div className="bg-slate-50/50 p-8 rounded-[2rem] border border-slate-100 mb-10">
+                                    <h5 className="font-bold uppercase tracking-wider text-slate-900 text-xs mb-4 flex items-center gap-2">
+                                        <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                                        Desarrollo de la Propuesta
+                                    </h5>
+                                    <p className="text-slate-600 text-lg leading-relaxed font-light">
+                                        {selectedProposal.detailedDesc}
+                                    </p>
+                                </div>
+
+                                <button
+                                    onClick={() => setSelectedProposal(null)}
+                                    className="w-full md:w-auto bg-slate-900 text-white px-10 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-green-700 transition-all duration-300 shadow-xl shadow-slate-900/20"
+                                >
+                                    Cerrar Ventana
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </section>
     );
 };

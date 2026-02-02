@@ -57,22 +57,56 @@ export const BANDERAS = [
   {
     title: "Representación Real",
     desc: "Su voz nace de conocer el Huila y de amar esta tierra. No va a figurar, va a defender a su gente.",
+    detailedDesc: "La Representación Real busca que las necesidades de los huilenses sean escuchadas en Bogotá. Natalia Caviedes trabajará para tender puentes entre el Gobierno Nacional y el territorio, asegurando que los proyectos vitales para el departamento no se queden en el olvido y que el Huila tenga el peso que merece en las decisiones nacionales.",
     icon: <Map className="w-12 h-12 text-green-400" />
   },
   {
     title: "Resultados con Sentido Humano",
     desc: "Su experiencia demuestra que cuando se gobierna con el corazón, los resultados llegan.",
-    icon: <Heart className="w-12 h-12 text-green-400" />
+    detailedDesc: "Buscamos que la labor legislativa tenga un impacto real en la dignidad de las personas. Nos enfocaremos en impulsar políticas que mejoren el acceso a servicios básicos y fortalezcan el tejido social, promoviendo siempre que los recursos públicos lleguen a quienes más lo necesitan con transparencia y calidez.",
+    icon: <Heart className="text-green-400" />
   },
   {
     title: "Congreso Cercano",
     desc: "La política debe volver a escuchar; estará en el territorio, rindiendo cuentas y caminando junto a la gente.",
+    detailedDesc: "Un Congreso cercano significa mantener un diálogo permanente con la comunidad. Realizaremos ejercicios de escucha activa en los municipios para informar sobre la gestión legislativa, recoger inquietudes y asegurar que nuestra posición en el Congreso sea un reflejo de lo que el Huila realmente necesita.",
     icon: <Users className="w-12 h-12 text-green-400" />
   },
   {
     title: "Construir desde la Región",
     desc: "Su oficina será el Huila, porque el desarrollo se construye desde las veredas y los municipios.",
+    detailedDesc: "Promovemos el fortalecimiento de la autonomía regional. Trabajaremos en la gestión de recursos para que los municipios tengan mayores facilidades de inversión en sus áreas prioritarias, apoyando siempre las iniciativas que surjan desde el corazón de nuestras comunidades rurales y urbanas.",
     icon: <Briefcase className="w-12 h-12 text-green-400" />
+  },
+  {
+    title: "Renovación Política",
+    desc: "Una política honesta y valiente que recupere la confianza de la gente con resultados transparentes.",
+    detailedDesc: "La renovación política empieza por el ejemplo. Nos comprometemos con una práctica legislativa ética y transparente, rindiendo cuentas de manera clara y promoviendo leyes que mejoren la eficiencia administrativa y el acceso a la información pública para todos los ciudadanos.",
+    icon: <Sparkles className="text-green-400" />
+  },
+  {
+    title: "Seguridad y Orden",
+    desc: "Legislar para proteger el derecho a la vida y la tranquilidad de todas las familias del Huila.",
+    detailedDesc: "Impulsaremos el fortalecimiento de las instituciones para garantizar la paz en nuestros territorios. Haremos seguimiento a las políticas de seguridad nacional para que se traduzcan en una presencia efectiva que proteja la vida, el trabajo y la tranquilidad de las familias huilenses.",
+    icon: <Shield className="text-green-400" />
+  },
+  {
+    title: "Vías para el Progreso",
+    desc: "Transformar la infraestructura para que el progreso y las oportunidades lleguen hasta la última vereda.",
+    detailedDesc: "Gestionaremos ante el Gobierno Nacional la inversión necesaria para el mantenimiento y mejora de nuestras vías terciarias. Nuestro objetivo es facilitar que el desarrollo llegue a cada rincón, permitiendo que el esfuerzo de nuestros productores se traduzca en mayor bienestar.",
+    icon: <TrendingUp className="text-green-400" />
+  },
+  {
+    title: "Huila Productivo",
+    desc: "Fortalecer el agro y el emprendimiento, garantizando que el esfuerzo de nuestra gente valga más.",
+    detailedDesc: "Fomentaremos el apoyo al campo a través de incentivos y gestiones que mejoren la competitividad de nuestros productores. Buscamos promover leyes que faciliten el acceso a mercados y tecnología, reconociendo al agro como el gran motor de la economía huilense.",
+    icon: <Leaf className="text-green-400" />
+  },
+  {
+    title: "Educación y Futuro",
+    desc: "Trabajar por una educación con calidad e infraestructura digna que brinde oportunidades reales a los jóvenes.",
+    detailedDesc: "Trabajaremos en la gestión de mejores espacios educativos y en el fortalecimiento de programas que preparen a nuestros jóvenes para los retos de hoy. Nuestro compromiso es promover leyes que garanticen una educación pertinente y accesible para todos los rincones del departamento.",
+    icon: <Award className="text-green-400" />
   }
 ];
 
