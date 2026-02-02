@@ -33,17 +33,26 @@ export const PROFILE_INFO = {
       {
         role: "Alcaldesa Histórica de Palermo (2020-2023)",
         desc: "Fue la primera mujer alcaldesa del municipio de Palermo con una votación histórica de 9.757 votos (63.95%). Lideró con hechos reales: vivienda digna, vías, infraestructura educativa, electrificación rural y apoyo al campo.",
+        detailedImpact: "Durante su mandato, Palermo vivió una transformación sin precedentes. Logró la gestión de más de 200 viviendas dignas, la pavimentación de puntos críticos en vías urbanas y rurales, y la modernización de 5 centros educativos. Además, alcanzó una cobertura de electrificación rural cercana al 98%, llevando luz a zonas que esperaron por décadas.",
         icon: <Award className="text-green-400" />
       },
       {
         role: "Concejal de Palermo (2016-2019)",
         desc: "Elegida en 2015, inició su camino de servicio público entendiendo las necesidades de su comunidad desde la base.",
+        detailedImpact: "Como concejal, se destacó por un control político riguroso y transparente. Lideró la aprobación de acuerdos municipales enfocados en el bienestar social, la protección de la mujer y el fortalecimiento de las asociaciones de productores rurales, consolidándose como la voz más firme en defensa de los recursos públicos.",
         icon: <Users className="text-green-400" />
       },
       {
         role: "Liderazgo con Responsabilidad",
         desc: "Aprendió que administrar los recursos de todos es una tarea sagrada que exige rigor, honestidad y transparencia.",
+        detailedImpact: "Su liderazgo se basa en la premisa de que lo público es sagrado. Ha sido reconocida por su capacidad de gerencia pública eficiente, logrando niveles de ejecución presupuestal superiores al 90% y manteniendo siempre canales abiertos de comunicación directa con la ciudadanía sin intermediarios.",
         icon: <ShieldCheck className="text-green-400" />
+      },
+      {
+        role: "Formación de Excelencia",
+        desc: "Como Abogada y Empresaria, Natalia aporta el equilibrio perfecto entre la legalidad y la visión estratégica para el desarrollo del Huila.",
+        detailedImpact: "Su perfil combina la rigurosidad legal como abogada con la visión pragmática del sector empresarial. Esta dualidad le permite entender cómo crear leyes que no solo sean justas, sino que también impulsen la productividad y generen empleo real en el departamento del Huila.",
+        icon: <Star className="text-green-400" />
       }
     ]
   },
@@ -115,12 +124,15 @@ export const LINES_OF_ACTION = [
   { title: "Renovación Política", desc: "Una política honesta, valiente y transparente que recupere la confianza de la gente.", icon: <Sparkles /> },
   { title: "Seguridad", desc: "Defender el derecho de las familias a vivir y trabajar en paz.", icon: <Shield /> },
   { title: "Vías para el Progreso", desc: "Conectar el campo con los mercados para que el esfuerzo del campesino valga más.", icon: <Map /> },
-  { title: "Productividad con Oportunidades", desc: "Fortalecer el agro y el emprendimiento para un Huila con futuro.", icon: <TrendingUp /> }
+  { title: "Productividad con Oportunidades", desc: "Fortalecer el agro y el emprendimiento para un Huila con futuro.", icon: <TrendingUp /> },
+  { title: "Inclusión y Bienestar", desc: "Promover políticas que garanticen la equidad, el apoyo a la mujer y la protección de los más vulnerables.", icon: <Heart /> }
 ];
 
 export const HUILA_STATS = [
   { label: "Municipios", value: "37" },
   { label: "Votos Históricos", value: "9.757" },
   { label: "% Votación", value: "63.95%" },
-  { label: "Número en Tarjetón", value: "103" }
+  { label: "Número en Tarjetón", value: "103" },
+  { label: "Compromiso", value: "100%" },
+  { label: "Voz del Huila", value: "2026" }
 ];
