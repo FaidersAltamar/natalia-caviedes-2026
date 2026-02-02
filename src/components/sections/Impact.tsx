@@ -42,56 +42,41 @@ const Impact = () => {
 
             {/* Stats Cards */}
             <div className="max-w-[100rem] mx-auto px-8 relative z-20">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {HUILA_STATS.map((stat, i) => {
-                        const isCompromiso = stat.label === "Compromiso Huila";
                         return (
-                            <div key={i} className={`group relative card-modern hover:-translate-y-3 border-2 transition-all duration-300 overflow-hidden ${isCompromiso
-                                ? 'border-green-200 bg-white hover:border-green-300 hover:shadow-2xl p-10 md:p-12'
-                                : 'border-slate-100 hover:border-green-200 p-12'
-                                }`}>
+                            <div key={i} className="group relative p-10 md:p-12 rounded-[2.5rem] bg-white border-2 border-slate-100 hover:border-green-200 hover:-translate-y-3 transition-all duration-300 overflow-hidden shadow-sm hover:shadow-2xl">
                                 {/* Background gradient on hover */}
-                                <div className={`absolute inset-0 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${isCompromiso
-                                    ? 'bg-gradient-to-br from-green-50/80 via-white to-green-50/40'
-                                    : 'bg-gradient-to-br from-green-50/60 via-white to-green-50/30'
-                                    }`}></div>
+                                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-green-50/60 via-white to-green-50/30"></div>
 
-                                {/* Decorative icon - solo para las que no son compromiso */}
-                                {!isCompromiso && (
-                                    <div className="absolute -right-8 -bottom-8 text-green-100/40 group-hover:text-green-200/60 transform rotate-12 transition-all duration-700 group-hover:scale-125 group-hover:rotate-6">
-                                        <TrendingUp size={140} strokeWidth={1} />
-                                    </div>
-                                )}
+                                {/* Decorative icon */}
+                                <div className="absolute -right-8 -bottom-8 text-green-100/40 group-hover:text-green-200/60 transform rotate-12 transition-all duration-700 group-hover:scale-125 group-hover:rotate-6">
+                                    <TrendingUp size={140} strokeWidth={1} />
+                                </div>
 
                                 {/* Content */}
                                 <div className="relative z-10">
-                                    <div className={`flex items-baseline mb-6 ${isCompromiso ? 'gap-2 md:gap-3' : 'gap-2'} flex-nowrap`}>
-                                        <p className={`font-display text-green-600 group-hover:text-green-700 transition-colors leading-none tracking-tight whitespace-nowrap ${isCompromiso
-                                            ? 'text-7xl md:text-8xl lg:text-9xl'
-                                            : 'text-8xl md:text-9xl'
-                                            }`}>
+                                    <div className="flex items-baseline mb-6 gap-1">
+                                        <p className="font-display text-green-600 group-hover:text-green-700 transition-colors leading-none tracking-tight text-6xl md:text-7xl lg:text-8xl xl:text-8xl">
                                             {stat.value.replace('%', '')}
                                         </p>
                                         {stat.value.includes('%') && (
-                                            <span className={`font-display text-green-600 group-hover:text-green-700 transition-colors leading-none ${isCompromiso ? 'text-5xl md:text-6xl lg:text-7xl' : 'text-5xl md:text-6xl'
-                                                }`}>%</span>
+                                            <span className="font-display text-green-600 group-hover:text-green-700 transition-colors leading-none text-4xl md:text-5xl">
+                                                %
+                                            </span>
                                         )}
                                     </div>
-                                    <div className={`bg-green-600 rounded-full mb-6 group-hover:w-full transition-all duration-500 ${isCompromiso ? 'w-28 md:w-32 h-1.5 md:h-2' : 'w-24 h-1.5'
-                                        }`}></div>
-                                    <p className={`font-bold uppercase tracking-[0.4em] text-green-700 group-hover:text-green-800 transition-colors leading-tight ${isCompromiso ? 'text-sm md:text-base' : 'text-xs md:text-sm'
-                                        }`}>
+                                    <div className="bg-green-600 rounded-full mb-6 w-16 group-hover:w-full transition-all duration-500 h-1.5 md:h-2"></div>
+                                    <p className="font-bold uppercase tracking-[0.3em] text-xs md:text-sm text-green-700 group-hover:text-green-800 transition-colors leading-tight">
                                         {stat.label}
                                     </p>
                                 </div>
 
                                 {/* Shine effect */}
-                                <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 -translate-x-full group-hover:translate-x-full"></div>
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 -translate-x-full group-hover:translate-x-full"></div>
 
-                                {/* Corner accent - solo para compromiso */}
-                                {isCompromiso && (
-                                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-green-400/20 to-transparent rounded-bl-[2rem] rounded-tr-[2rem] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                )}
+                                {/* Top corner accent */}
+                                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-green-400/10 to-transparent rounded-bl-[2rem] opacity-0 group-hover:opacity-100 transition-opacity"></div>
                             </div>
                         );
                     })}

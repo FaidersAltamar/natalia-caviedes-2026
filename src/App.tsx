@@ -7,6 +7,7 @@ import Impact from './components/sections/Impact';
 import Profile from './components/sections/Profile';
 import Trajectory from './components/sections/Trajectory';
 import Proposals from './components/sections/Proposals';
+import Press from './components/sections/Press';
 import JoinTeam from './components/sections/JoinTeam';
 import Voting from './components/sections/Voting';
 import Contact from './components/sections/Contact';
@@ -21,6 +22,7 @@ const App: React.FC = () => {
       <Trajectory />
       <Proposals />
       <JoinTeam />
+      <Press />
       <Voting />
       <Contact />
       <Footer />

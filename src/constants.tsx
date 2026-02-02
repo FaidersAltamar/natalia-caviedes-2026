@@ -132,7 +132,136 @@ export const HUILA_STATS = [
   { label: "Municipios", value: "37" },
   { label: "Votos Históricos", value: "9.757" },
   { label: "% Votación", value: "63.95%" },
-  { label: "Número en Tarjetón", value: "103" },
-  { label: "Compromiso", value: "100%" },
-  { label: "Voz del Huila", value: "2026" }
+  { label: "Número en Tarjetón", value: "103" }
+];
+
+export const PRESS_RELEASES = [
+  {
+    title: "Inversión de $4.449 millones para redes y vías en El Juncal",
+    date: "2022",
+    file: "/prensa/PERIODICO 2022 - Modificaciones Noviembre.pdf",
+    category: "Periódico",
+    image: "/assets/previews/periodico.png",
+    summary: "Edición especial que detalla la reposición de redes de acueducto con 40 años de uso y la pavimentación total de la vía principal del centro poblado El Juncal."
+  },
+  {
+    title: "Palermo invierte más de $33.406 millones de regalías",
+    date: "2022",
+    file: "/prensa/2 (1).pdf",
+    category: "Gestión",
+    image: "/assets/previews/boletin.png",
+    summary: "El municipio se destaca por el uso eficiente de regalías con 18 proyectos en vías, vivienda y electrificación rural, beneficiando a cientos de familias palermunas."
+  },
+  {
+    title: "Palermo avanza hacia una transformación integral",
+    date: "2023",
+    file: "/prensa/palermo.pdf",
+    category: "Gestión",
+    image: "/assets/previews/boletin.png",
+    summary: "Balance de gestión con inversión histórica de $39.862 millones para reducir brechas sociales a través de 641 mejoramientos de vivienda, electrificación y alcantarillado."
+  },
+  {
+    title: "Palermo invierte $3.900 millones en escenarios deportivos",
+    date: "2022",
+    file: "/prensa/palermo (1).pdf",
+    category: "Deporte y Social",
+    image: "/assets/previews/boletin.png",
+    summary: "Construcción de cubiertas y modernización integral de 7 polideportivos en barrios clave para fortalecer el tejido social y el sano esparcimiento."
+  },
+  {
+    title: "Palermo reactiva la economía en fiestas decembrinas",
+    date: "2021",
+    file: "/prensa/palermo (2).pdf",
+    category: "Economía y Cultura",
+    image: "/assets/previews/informativo.png",
+    summary: "Reactivación económica masiva a través del fomento al turismo navideño, ferias artesanales y la primera Feria Cafetera del Noroccidente del Huila."
+  },
+  {
+    title: "Palermo le apuesta a la educación",
+    date: "2022",
+    file: "/prensa/2.pdf",
+    category: "Educación",
+    image: "/assets/previews/boletin.png",
+    summary: "Inversión histórica en educación: entrega de 5.073 kits escolares, transporte para 756 estudiantes, dotación de restaurantes y optimización de infraestructura en 7 instituciones."
+  },
+  {
+    title: "Palermo, potencializa la productividad del campo",
+    date: "2022",
+    file: "/prensa/2 (2).pdf",
+    category: "Productividad",
+    image: "/assets/previews/informativo.png",
+    summary: "Apoyo histórico al agro palermuno con la creación de la Oficina de Productividad, mercados campesinos y gestiones para la primera Planta de Transformación de Mármol."
+  },
+  {
+    title: "Palermo le apuesta a la recuperación de la malla vial con más de $15 mil millones",
+    date: "2022",
+    file: "/prensa/2 (3).pdf",
+    category: "Infraestructura",
+    image: "/assets/previews/boletin.png",
+    summary: "Rehabilitación histórica de la malla vial con más de 40 tramos urbanos intervenidos, optimización de redes de acueducto y gestiones para la vía Juncal-Palermo."
+  },
+  {
+    title: "Palermo invertirá $1.907 millones en proyecto de electrificación rural",
+    date: "2021",
+    file: "/prensa/3 (1).pdf",
+    category: "Desarrollo Rural",
+    image: "/assets/previews/boletin.png",
+    summary: "Ampliación de la red eléctrica para beneficiar a 131 familias de Brisas del Carmen y El Quebradón, llevando energía a zonas que esperaron por más de una década."
+  },
+  {
+    title: "Palermo entre los primeros lugares en gestión de salud",
+    date: "2022",
+    file: "/prensa/3 (2).pdf",
+    category: "Salud",
+    image: "/assets/previews/informativo.png",
+    summary: "Reconocimiento departamental por excelente gestión en salud (98.75 puntos). Reapertura de centros, nueva ambulancia y más de 10.480 usuarios atendidos en brigadas."
+  },
+  {
+    title: "Inversión histórica de $4.400 millones para El Juncal",
+    date: "2022",
+    file: "/prensa/3 (3).pdf",
+    category: "Infraestructura",
+    image: "/assets/previews/boletin.png",
+    summary: "Optimización integral de redes de acueducto y alcantarillado con más de 40 años de antigüedad, junto a la pavimentación asfáltica para beneficio de 4.750 habitantes."
+  },
+  {
+    title: "Subsidios de vivienda para 591 familias",
+    date: "2022",
+    file: "/prensa/3.pdf",
+    category: "Vivienda",
+    image: "/assets/previews/boletin.png",
+    summary: "Gestión de recursos ante el DPS y la UNGR para el mejoramiento de vivienda en zonas rural y urbana, incluyendo atención prioritaria a damnificados por el invierno."
+  },
+  {
+    title: "Rehabilitación de vías antiguas en Palermo ($4.300 millones)",
+    date: "2021",
+    file: "/prensa/palermo (3).pdf",
+    category: "Infraestructura",
+    image: "/assets/previews/boletin.png",
+    summary: "Reposición total de redes de acueducto y pavimentación en barrios históricos como Santa Rosalía y Fátima, beneficiando a más de 12.000 palermunos."
+  },
+  {
+    title: "Más de $1.200 millones en automotores para Palermo",
+    date: "2021",
+    file: "/prensa/Palermo (4).pdf",
+    category: "Equipamiento",
+    image: "/assets/previews/boletin.png",
+    summary: "Adquisición de carro compactador, volquetas y kit de maquinaria amarilla ($3.100M) para optimizar el aseo público y el mantenimiento de vías rurales."
+  },
+  {
+    title: "Optimización de redes en 11 sectores ($2.675 millones)",
+    date: "2021",
+    file: "/prensa/palermo (5).pdf",
+    category: "Infraestructura",
+    image: "/assets/previews/boletin.png",
+    summary: "Reposición técnica de redes de acueducto y alcantarillado en 11 sectores que no habían sido intervenidos en 20 años, generando 30 empleos directos."
+  },
+  {
+    title: "Palermo respalda al comercio informal por primera vez",
+    date: "2021",
+    file: "/prensa/PALERMO (6).pdf",
+    category: "Social y Económico",
+    image: "/assets/previews/boletin.png",
+    summary: "Entrega de 20 módulos móviles y capacitaciones integrales para dignificar el trabajo de los vendedores ambulantes y organizar el espacio público."
+  }
 ];
